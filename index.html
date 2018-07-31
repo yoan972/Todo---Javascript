@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />	
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>To Do App</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<main id="app">
+		<section class="profile">
+			<div class="profile__pic"></div>
+			<div class="profile__name">
+				<p class="firstName">Laura</p>
+				<p class="lastName">Ls</p>
+			</div>	
+		</section>
+		<section class="stat">
+			<div class="stat__tab stat__tab--active">
+				<p><span class="bold" id="created">73</span><br/> created tasks</p>
+			</div>
+			<div class="stat__tab">
+				<p><span class="bold" id="completed">56</span><br/> completed tasks</p>
+			</div>
+		</section>
+		<section class="task">
+			<section class="task__group">
+				<p class="task__group-title">Places</p>
+				<div class="task__item active">
+					<p class="task__item-title">Shop</p>
+					<p class="task__item-subtitle">Smart place</p>
+				</div>
+				<div class="task__item active">
+					<p class="task__item-title">Shop</p>
+					<p class="task__item-subtitle">Smart place</p>
+				</div>
+				<div class="task__item active">
+					<p class="task__item-title">Shop</p>
+					<p class="task__item-subtitle">Smart place</p>
+				</div>
+				<div class="task__add">+</div>
+			</section>
+			<section class="task__group">
+				<p class="task__group-title">People</p>
+				<div class="task__item active">
+					<p class="task__item-title">Shop</p>
+					<p class="task__item-subtitle">Smart place</p>
+				</div>
+				<div class="task__item active">
+					<p class="task__item-title">Shop</p>
+					<p class="task__item-subtitle">Smart place</p>
+				</div>
+				<div class="task__add">+</div>
+			</section>
+		</section>
+		<div id="modal" class="modal">
+			<div class="modal__content">
+				<span id="close" class="close">&times;</span>
+				<h2 class="modal__title">Ajouter une tache</h2>
+				<input class="modal__input" type="text" id="title" placeholder="Titre..."><br/>
+				<input class="modal__input" type="text" id="subtitle" placeholder="Sous-titre...">
+  				<button id="add" class="modal__btn">Ajouter</button>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
