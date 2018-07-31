@@ -117,7 +117,7 @@ background: #3598fe;
 }
 .task__item-subtitle{
 	color: #cecdd4;
-}
+} 
 .task__add{
 	background-color: #919099;
 	border-radius: 5px;
@@ -202,6 +202,9 @@ background: #3598fe;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     transition: 0.3s;
+}
+.modal__btn--delete{
+  background-color: red;
 }
 .modal__btn:hover{
 	background-color: #504f56;
