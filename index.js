@@ -52,18 +52,17 @@ function removeTask () {
 		taskTobeRemove.classList.remove('active');
 		taskTobeRemove.addEventListener('transitionend',function () {
 			taskTobeRemove.parentNode.removeChild(taskTobeRemove);
+			countTask ();
 		})
 	}else{
 		currElem.classList.remove('active');
 		currElem.addEventListener('transitionend',function () {
 			currElem.parentNode.removeChild(currElem);
-		})
-		
-		
+			countTask ();
+		})	
 	}
-	
 	closeModal(1);
-
+	
 }
 
 function finishTask () {
