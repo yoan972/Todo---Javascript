@@ -19,43 +19,53 @@
 		</section>
 		<section class="stat">
 			<div class="stat__tab stat__tab--active">
-				<p><span class="bold" id="created">73</span><br/> created tasks</p>
+				<p><span class="bold" id="created">0</span><br/> created tasks</p>
 			</div>
 			<div class="stat__tab">
-				<p><span class="bold" id="completed">56</span><br/> completed tasks</p>
+				<p><span class="bold" id="completed">0</span><br/> completed tasks</p>
 			</div>
 		</section>
-		<section class="task">
-			<section class="task__group">
-				<p class="task__group-title">Places</p>
-				<div class="task__item active">
-					<p class="task__item-title">Shop</p>
-					<p class="task__item-subtitle">Smart place</p>
-				</div>
+		<section class="tab">
+			<div class="task" id="currentTask">
+				<section class="task__group">
+					<p class="task__group-title">Places</p>
+					<div class="task__item active">
+						<p class="task__item-title">Shop</p>
+						<p class="task__item-subtitle">Smart place</p>
+					</div>
+						
+		
+					<div class="task__item active">
+						<p class="task__item-title">Shop</p>
+						<p class="task__item-subtitle">Smart place</p>
+					</div>
+					<div class="task__item active">
+						<p class="task__item-title">Shop</p>
+						<p class="task__item-subtitle">Smart place</p>
+					</div>
+					<div class="task__add">+</div>
+				</section>
+				<section class="task__group task__group--yellow">
+					<p class="task__group-title">People</p>
+					<div class="task__item active">
+						<p class="task__item-title">Shop</p>
+						<p class="task__item-subtitle">Smart place</p>
+					</div>
+					<div class="task__item active">
+						<p class="task__item-title">Shop</p>
+						<p class="task__item-subtitle">Smart place</p>
+					</div>
+					<div class="task__add">+</div>
+				</section>
+			</div>
+
+
+			<div class="task" >
+				<section class="task__group task__group--grey" id="completeTask">
+					<p class="task__group-title">Completed</p>
 					
-				</div>
-				<div class="task__item active">
-					<p class="task__item-title">Shop</p>
-					<p class="task__item-subtitle">Smart place</p>
-				</div>
-				<div class="task__item active">
-					<p class="task__item-title">Shop</p>
-					<p class="task__item-subtitle">Smart place</p>
-				</div>
-				<div class="task__add">+</div>
-			</section>
-			<section class="task__group">
-				<p class="task__group-title">People</p>
-				<div class="task__item active">
-					<p class="task__item-title">Shop</p>
-					<p class="task__item-subtitle">Smart place</p>
-				</div>
-				<div class="task__item active">
-					<p class="task__item-title">Shop</p>
-					<p class="task__item-subtitle">Smart place</p>
-				</div>
-				<div class="task__add">+</div>
-			</section>
+				</section>
+			</div>
 		</section>
 		<div id="modal" class="modal">
 			<div class="modal__content">

@@ -5,6 +5,7 @@ main{
 	width: 100%;
 	max-width: 480px;
 	margin: auto;
+  overflow: hidden;
 }
 body{
 	margin: 0;
@@ -76,14 +77,29 @@ p{
 width: 100%;
 background: #3598fe;
 }
+.tab{
+  width:200%;
+  display: flex;
+  transition: transform 0.3s;
+}
+.translate{
+  transform: translateX(-465px);
+}
 .task{
 	margin-left: 20px;
+  width: 50%;
 }
 .task__group{
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 2em;
 	perspective: 100px;
+}
+.task__group--yellow > .task__item{
+  background-color: #f95959;
+}
+.task__group--grey > .task__item{
+  background-color: #919099;
 }
 .task__group-title{
 	width: 100%;

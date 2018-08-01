@@ -66,13 +66,60 @@ function removeTask () {
 }
 
 function finishTask () {
-	// body...
+	if (currElem.nodeName == "P") {
+		taskToBeFinish = currElem.parentNode;
+		taskToBeFinish.classList.remove('active');
+		taskToBeFinish.addEventListener('transitionend',function () {
+			completeTask.appendChild(taskToBeFinish);
+			taskToBeFinish.setAttribute('class','task__item active');
+			taskToBeFinish.removeEventListener('click',openModal)
+			taskToBeFinish.style.cursor = "initial"
+		})
+
+	}else{
+		currElem.classList.remove('active');
+		currElem.addEventListener('transitionend',function () {
+			completeTask.appendChild(currElem);
+			currElem.setAttribute('class','task__item active');
+			currElem.removeEventListener('click',openModal)
+			currElem.style.cursor = "initial"
+			
+		})
+	}
+	closeModal(1);
+	setTimeout(countTask,600);
+
+}
+function switchTab () {
+	let tab = event.target;
+	if (event.target.nodeName == "P") {
+		tab = event.target.parentNode;
+	}
+	if(event.target.nodeName == "SPAN"){
+		tab = event.target.parentNode.parentNode;
+	}
+	if (tab.classList.contains('stat__tab--active')) {
+		return
+	}
+
+	let tabs = document.querySelectorAll('.stat__tab');
+	 tabs.forEach(tab => {
+		tab.classList.remove('stat__tab--active');
+	})
+	let action = document.querySelector('.tab');
+	action.classList.toggle('translate'); 	
+	tab.classList.add('stat__tab--active');
+	
 }
 
 function countTask () {
 	let created = document.getElementById('created');
 	let createdTask = document.querySelectorAll('.task__item').length;
 	created.innerHTML = createdTask;
+
+	let completed = document.getElementById('completed');
+	let completedTask = document.getElementById('completeTask').children.length;
+	completed.innerHTML = completedTask - 1;
 }
 
 
@@ -93,4 +140,6 @@ document.addEventListener('DOMContentLoaded', function  () {
 	});
 	remove.addEventListener('click',removeTask);
 	finish.addEventListener('click',finishTask);
+	let tab = document.querySelector('.stat');
+	tab.addEventListener('click',switchTab)
 })
